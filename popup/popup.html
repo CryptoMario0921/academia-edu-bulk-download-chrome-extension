@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Academia Edu Auto Bulk Downloader</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <h1>Search Options</h1>
+
+    <input type="text" id="query" placeholder="Type a query to search..." />
+
+    <div class="row">
+        <input type="number" min="1990" step="1" value="1990" id="start_date" placeholder="Start Date" />
+        <input type="number" min="1990" step="1" value="2025" id="end_date" placeholder="End Date" />
+    </div>
+
+    <div class="row">
+        <select id="publication_type">
+            <option value="" selected>Publication Type</option>
+            <option value="journal-article">Journal Article</option>
+            <option value="book">Book</option>
+            <option value="conference-paper">Conference Paper</option>
+            <option value="other">Other</option>
+        </select>
+        <select id="language">
+            <option value="" selected>Language</option>
+            <option value="en">English</option>
+        </select>
+    </div>
+
+    <button type="button" class="download" id="download">Download</button>
+
+    <script src="popup.js"></script>
+</body>
+</html>
