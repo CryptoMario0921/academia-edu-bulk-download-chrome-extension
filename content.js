@@ -18,7 +18,7 @@ const API_URL = 'https://www.academia.edu/v0';
 const downloadPapers = async (query, option) => {
     try {
         const { total } = await search(query, option);
-        const totalPage = Math.floor(total / 10);
+        const totalPage = Math.ceil(total / 10);
 
         if (total > 0) {
             for (let i = 0; i < totalPage; i++) {
